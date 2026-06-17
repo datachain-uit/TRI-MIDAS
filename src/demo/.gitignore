@@ -1,0 +1,69 @@
+
+# Node / Package managers
+node_modules/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# Build outputs
+dist/
+build/
+.out/
+.next/
+coverage/
+
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+
+# Logs
+logs/
+*.log
+
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+*.swp
+
+# TypeScript
+*.tsbuildinfo
+
+
+# Prisma
+prisma/migrations/
+prisma/dev.db
+prisma/*.db
+prisma/*.db-journal
+
+
+# Next.js specific
+.next/
+out/
+.vercel/
+
+
+# NestJS specific
+dist/
+node_modules/
+
+
+# Testing
+coverage/
+*.lcov
+
+# Misc
+.tmp/
+.cache/

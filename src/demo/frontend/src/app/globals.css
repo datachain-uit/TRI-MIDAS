@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Tone: dark + indigo/teal (distinct from the original warm gold/cream) */
+  --text-primary: #e5e7eb;
+  --text-secondary: #2dd4bf; /* teal accent */
+  --text-muted: #94a3b8; /* slate */
+
+  --foreground: var(--text-primary);
+
+  --background: #0f1419;
+  --background-gradient: linear-gradient(
+    -80deg,
+    #0a0e1a 0%,
+    #111827 40%,
+    #0f1f2a 100%
+  );
+
+  --card: #111827;
+  --card-foreground: var(--foreground);
+
+  --primary: #6366f1; /* indigo */
+  --primary-foreground: #0b0f17;
+
+  --secondary: #1e293b;
+  --secondary-foreground: var(--foreground);
+
+  --muted: #1e293b;
+  --muted-foreground: var(--text-muted);
+
+  --accent: #14b8a6; /* teal */
+  --accent-foreground: #0b0f17;
+
+  --destructive: #f43f5e; /* rose */
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: #6366f1;
+
+  --chart-1: #6366f1; /* indigo */
+  --chart-2: #2dd4bf; /* teal */
+  --chart-3: #f59e0b; /* amber */
+  --chart-4: #f43f5e; /* rose */
+  --chart-5: #8b5cf6; /* violet */
+
+  --radius: 0.9rem; /* slightly rounder cards (format tweak) */
+  --shadow-main: 0 20px 60px rgba(0, 0, 0, 0.55);
+  --card-gradient: linear-gradient(to bottom, #111827 70%, #0f1f2a 100%);
+}
+
+.dark {
+  --text-primary: #e5e7eb;
+  --foreground: var(--text-primary);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    background-color: var(--background);
+    background-image: var(--background-gradient);
+    background-attachment: fixed;
+    background-size: cover;
+
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  div,
+  p {
+    color: var(--foreground);
+  }
+}
+
+@layer utilities {
+  .torn-paper {
+    filter: url(#torn);
+    text-shadow: 0.5px 0 0 rgba(0, 0, 0, 0), -0.5px 0 0 rgba(0, 0, 0, 0),
+      0 0.5px 0 rgba(0, 0, 0, 0), 0 -0.5px 0 rgba(0, 0, 0, 0);
+  }
+}

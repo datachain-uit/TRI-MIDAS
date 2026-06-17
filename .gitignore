@@ -1,0 +1,28 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ---- Pipeline artifacts ----
+phase_*/
+*.csv
+data/
+
+# ---- Node / Next.js (demo) ----
+node_modules/
+.next/
+out/
+build/
+.env
+.env.local
+.env*.local
+npm-debug.log*
+pnpm-debug.log*
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
