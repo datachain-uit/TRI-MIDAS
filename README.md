@@ -184,5 +184,5 @@ TRI-MIDAS/
 <a id="contributors"></a>
 
 ## 👥 Contributors
-
-- Nguyễn Đức Minh Mẫn — CQ (Course Quality) research
+- Leader: M.Sc. IT. Nguyễn Thị Anh Thư
+- Members : Nguyễn Đức Minh Mẫn
